@@ -19,16 +19,23 @@ public class Person {
         this.obj = klass;
     }
 
+    public int hashCode() {
+        return id;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof Person) {
+            return obj.hashCode() == hashCode();
+        }
+        return false;
+    }
+
     public String getName() {
         return name;
     }
 
     public int getAge() {
         return age;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public Klass getKlass() {

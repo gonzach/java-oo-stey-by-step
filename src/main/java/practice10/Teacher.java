@@ -23,7 +23,6 @@ public class Teacher extends Person{
         this.id = id;
         this.name = name;
         this.age = age;
-        this.KlasslinkedList = null;
     }
 
     public String getName(){

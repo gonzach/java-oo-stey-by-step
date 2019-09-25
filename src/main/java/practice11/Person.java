@@ -9,6 +9,16 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+    public int hashCode() {
+        return id;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof Person) {
+            return obj.hashCode() == hashCode();
+        }
+        return false;
+    }
 
     public String getName() {
         return name;

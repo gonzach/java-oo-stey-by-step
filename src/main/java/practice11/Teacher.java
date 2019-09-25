@@ -62,7 +62,7 @@ public class Teacher extends Person {
     public String introduceWith(Student name) {
         this.student = name;
         if ( KlasslinkedList.getFirst().getNumber() != student.getKlass().getNumber() ) {
-            return ( super.introduce() + " I am a Teacher. I don't teach " + getName() + ".");
+            return ( super.introduce() + " I am a Teacher. I don't teach " + student.getName() + ".");
         } else {
             return ( super.introduce() + " I am a Teacher. I teach " + student.getName() + ".");
         }

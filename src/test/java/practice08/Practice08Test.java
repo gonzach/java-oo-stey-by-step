@@ -3,8 +3,6 @@ package practice08;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Objects;
-
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class Practice08Test {
@@ -22,25 +20,12 @@ public class Practice08Test {
         assertThat(person.getAge()).isEqualTo(21);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Practice08Test)) return false;
-        Practice08Test that = (Practice08Test) o;
-        return Objects.equals(klass, that.klass);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(klass);
-    }
-/*
     @Test
     public void should_person_with_same_id_be_same_one() throws Exception {
         Person person1 = new Person(1, "Tom", 21);
         Person person2 = new Person(1, "Tom", 21);
         assertThat(person1).isEqualTo(person2);
-    } */
+    }
 
     @Test
     public void should_person_have_an_introduce_method_which_introduce_person_with_name_and_age() throws Exception {

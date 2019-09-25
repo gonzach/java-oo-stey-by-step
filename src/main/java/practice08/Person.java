@@ -17,7 +17,6 @@ public class Person {
         this.age = age;
         this.id = id;
         this.obj = klass;
-
     }
 
     public String getName() {
@@ -28,12 +27,20 @@ public class Person {
         return age;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public Klass getKlass() {
         return obj;
+    }
+
+    public int hashCode() {
+        return id;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof Person) {
+            return obj.hashCode() == hashCode();
+        }
+        return false;
     }
 
     public String introduce(){
